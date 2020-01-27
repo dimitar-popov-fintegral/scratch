@@ -1,0 +1,17 @@
+import os
+import sys
+import numpy
+
+from multiprocess import Pool, RawArray
+
+
+##################################################
+def main(None) -> int:
+    """Main function to test the use of memory sharing processes in python"""
+    n=100; s=1000; t=500
+    tensor_dim = (n,t,k)
+    tensor = numpy.random.standard_random(tensor_dim, dtype=numpy.float32)
+
+##################################################
+if __name__ == "__main__":
+    assert main() == 0

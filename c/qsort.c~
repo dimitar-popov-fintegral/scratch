@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void qsort(int arr[], int left, int right);
+void swap(int arr[], int i, int j);
+
+int main(void){
+
+  
+  return 0;
+
+
+}
+
+void qsort(int arr[], int left, int right){
+
+  int i, last;
+  
+
+}
+
+
+void swap(int arr[], int i, int j){
+
+  int temp = arr[i];
+  arr[j] = arr[i];
+  arr[j] = temp;
+
+}

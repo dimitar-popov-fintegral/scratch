@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+#define SIZE 10
+
+asint main(){
+
+  int c;
+
+  int ndigit[SIZE];
+
+  while((c = getchar()) != EOF){
+    
+    if(c > '0' && c < '9')
+      ++ndigit[c-'0'];
+    
+  }
+
+  for(int i=0; i<SIZE; ++i)
+    printf("Digit count for [%d] is [%d] \n", i, ndigit[i]);
+  
+
+  return 0;
+
+}

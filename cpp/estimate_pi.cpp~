@@ -1,0 +1,17 @@
+/* Simple trail program to determine the value of Pi using monte-carlo
+ */
+
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main() {
+  srand(12357);
+  cout.precision(10);
+  cout << "Here!" << endl;
+
+  return 0
+    
+}

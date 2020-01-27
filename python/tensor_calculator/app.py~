@@ -1,0 +1,4 @@
+import tensor_calculator as tc
+
+if __name__ == " __main__":
+    tc.create_app()

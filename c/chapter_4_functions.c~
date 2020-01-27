@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int strindex(char str[], char match[]);
+
+
+
+//////////////////////////////////////////////////
+int main(){
+
+  return 0;
+
+}
+
+
+//////////////////////////////////////////////////
+int strindex(char str[], char match[]){
+
+  int i,j,k;
+
+  //outer loop: goes over the str array
+  for(int i=0; s[i] != '\0'; i++){
+    //inner loop: goes over potential matches one char at a time
+    for(j=i, k=0; match[k] != '\n' && str[j] == match[j]; j++, k++)
+      ;
+    if(k>0 && match[k] != '\0'){
+      return i;
+    }
+  }
+  
+  return -1;
+
+}
