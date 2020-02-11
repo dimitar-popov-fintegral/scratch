@@ -18,6 +18,7 @@ __pycache__/
 *.so
 # @DP
 *.out
+echo
 
 # Distribution / packaging
 .Python
