@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swap(void **arr, int i, int j);
+void swap(void *arr[], int i, int j);
 
 int main(int argc, char *argv[]){
 
