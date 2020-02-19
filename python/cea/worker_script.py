@@ -36,7 +36,7 @@ def main():
 
     """
     file_to_copy_name = "some.file"
-    path_to_copy_file = os.path.join(THIS_DIR, file_to_copy_name)
+    path_to_copy_file = os.path.join(get_input_dir(), file_to_copy_name)
 
     workbook_path = os.path.join(get_input_dir(), "workbook_with_file_names.xlsx")
     excel_workbook = xlrd.open_workbook(workbook_path)
@@ -100,3 +100,4 @@ def get_input_dir() -> str:
 ##################################################
 if __name__ == "__main__":
     main()
+    print("Done!")

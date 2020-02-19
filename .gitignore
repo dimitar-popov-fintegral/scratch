@@ -1,6 +1,7 @@
 #@DP
 **/output
 *.xlsx
+**/.DS_STORE
 
 # emacs
 *~
