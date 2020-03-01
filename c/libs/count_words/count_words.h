@@ -6,11 +6,6 @@ struct key{
   char * word;
   int count;
 
-} key_arr[] = {
-	     {"include", 0},
-	     {"define", 0},
-	     {"struct", 0},
-	     {"int", 0}
 };
 
 void quick_sort(void * arr[], int left, int right,

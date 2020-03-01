@@ -26,6 +26,11 @@ __pycache__/
 echo
 *.o
 
+#@DP - lib exec files
+c/libs/count_words/tests/run_tests
+c/libs/count_words/main
+
+
 # Distribution / packaging
 .Python
 build/
