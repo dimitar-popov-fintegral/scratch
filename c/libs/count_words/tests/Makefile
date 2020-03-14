@@ -1,7 +1,7 @@
 CC=/usr/local/bin/gcc-9
 CFLAGS=-c -Wall -std=c99 
 LDFLAGS=-lcheck -lpthread -lm -I../ -I/usr/local/Cellar/check/0.14.0/include -L/usr/local/Cellar/check/0.14.0/lib
-DEPS=test.h
+DEPS=tests.h
 
 all: run_tests
 

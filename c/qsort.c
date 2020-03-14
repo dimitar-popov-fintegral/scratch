@@ -7,9 +7,7 @@ void swap(int arr[], int i, int j);
 //////////////////////////////////////////////////
 int main(void){
 
-  
   return 0;
-
 
 }
 
