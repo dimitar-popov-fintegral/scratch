@@ -35,14 +35,29 @@ END_TEST
 
 
 //////////////////////////////////////////////////
+START_TEST (test_quick_sort){
+  printf("Running test quick sort function \n");
+  struct key one = {"c", 3};
+  struct key two = {"b", 2};
+  struct key the = {"a", 1};
+  struct key * keytab[] = {&one, &two, &the};
+  quick_sort( (void *) keytab, 0, 2, (int (*)(void *, void *)) kw_comp);
+  // the above line casts the fn kw_comp to one which is
+  // accepted by the quick_sort function 
+  ck_assert_str_eq(keytab[0]->word, "a");
+  ck_assert_str_eq(keytab[1]->word, "b");
+  ck_assert_str_eq(keytab[2]->word, "c");    
+}
+END_TEST
+
+
+//////////////////////////////////////////////////
 START_TEST (test_void_swap){
   printf("Running test void swap function \n");
   struct key left = {"this", 0};
   struct key right = {"that", 0};
   struct key * keytab[] = {&left, &right};
   swap((void **) keytab, 0, 1);
-  printf("[0] = %s \n\n", keytab[0]->word);
-  printf("[1] = %s \n\n", keytab[1]->word);
   ck_assert_str_eq(keytab[0]->word, "that");
   ck_assert_str_eq(keytab[1]->word, "this");
 }
@@ -60,6 +75,7 @@ Suite *create_sample_suite(void)
   tcase_add_test(test_case, test_kw_comp);
   tcase_add_test(test_case, test_count_comp);  
   tcase_add_test(test_case, test_void_swap);
+  tcase_add_test(test_case, test_quick_sort);
   suite_add_tcase(suite, test_case);
   return suite;
 }

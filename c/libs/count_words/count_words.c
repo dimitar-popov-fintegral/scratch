@@ -10,17 +10,26 @@ void quick_sort(void * arr[], int left, int right,
     2. partition into, typically two sides
     3. swap split element & left-most item i.e. create hole
     4. start loop
-    . last = hole
-    . compare lhs, rhs
-    . swap if lhs < rhs
-    . increment after swap 
+      . last = hole
+      . compare lhs, rhs
+      . swap if lhs < rhs
+      . increment after swap 
   */
-  int pos, hole, partition;
+  int i, hole, partition;
 
   if(left>=right)
     return;
 
   partition = (left + right) / 2;
+  swap(arr, left, partition);
+  hole = left;
+  for(i = hole + 1; i <= right; i++)
+    if(comp((void *) arr[i], (void *) arr[left]) < 0)
+       swap((void **) arr, ++hole, i);
+
+  swap((void **) arr, left, hole);
+  quick_sort(arr, left, hole - 1, comp);
+  quick_sort(arr, hole + 1, right, comp);
 
   return;
 
