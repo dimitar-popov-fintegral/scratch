@@ -1,10 +1,10 @@
 def check(a, b):
     print("level [%s] \n" %",".join(a.keys()))
     for k,v in a.items():
-        if isinstance(v, dict):
-            check(a[k],b[k])
         assert k in b,\
             "key [%s] missing in b" %k
+        if isinstance(v, dict):
+            check(a[k],b[k])
         assert v == b[k],\
             "mis-match in [%s], [%s] != [%s]" %(k, v, b[k])
 
